@@ -13,6 +13,7 @@ body {
     justify-content: center;
     font-size: 18px;
     background-size: cover;
+    background-color: #232323;
 }
 
 .container {
@@ -22,7 +23,7 @@ body {
     padding: 2rem;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
     border-radius: var(--border-radius);
-    background: #232323;
+    background: #292929;
 }
 
 .container,
