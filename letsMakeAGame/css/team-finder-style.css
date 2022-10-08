@@ -35,8 +35,8 @@ body {
     margin: 30px;
 
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px 20px;
 }
 
 .card {
@@ -51,7 +51,7 @@ body {
 .name {
     text-align: left;
     font-size: 20px;
-    padding: 15px;
+    padding: 5px 15px;
 }
 
 .speciality {
