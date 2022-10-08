@@ -1,0 +1,16 @@
+body {
+    background-color: #232323;
+}
+
+.login-card {
+    position: center;
+    height: 500px;
+    width: 450px;
+    background-color: #4e4e4e;
+    border-radius: 20px;
+}
+
+.login-text {
+    text-align: center;
+    color: white;
+}
