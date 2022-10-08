@@ -30,6 +30,15 @@ body {
     color: white;
 }
 
+.cards {
+    color: white;
+    margin: 30px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+    gap: 20px;
+}
+
 .card {
     font-family: Helvetica;
     background-color: #4e4e4e;
@@ -40,13 +49,27 @@ body {
 }
 
 .name {
-    color: white;
     text-align: left;
     font-size: 20px;
     padding: 15px;
 }
 
-.about-dev {
-    color: white;
+.speciality {
+    font-size: 19px;
     margin: -10px 15px;
+}
+
+.technologies {
+    margin: 25px 15px;
+}
+
+.links {
+    margin: 85px 15px;
+    font-size: 15px;
+    vertical-align: top;
+}
+
+.links a{
+    text-decoration: none;
+    color: darkorange;
 }
