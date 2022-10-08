@@ -1,0 +1,75 @@
+/* main */
+body {
+    background-color: #232323;
+}
+
+/* NAVIGATION BAR */
+.navbar {
+    background-color: #313131;
+    overflow: hidden;
+    font-family: Helvetica;
+    font-size: 22px;
+    margin: -10px;
+}
+
+.navbar a {
+    float: left;
+    color: #ff8c00;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 19px;
+}
+
+.navbar a.right {
+    float: right;
+}
+
+/* Change the color of links on hover */
+.navbar a:hover {
+    color: white;
+}
+
+.cards {
+    color: white;
+    margin: 30px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px 20px;
+}
+
+.card {
+    font-family: Helvetica;
+    background-color: #4e4e4e;
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+
+}
+
+.name {
+    text-align: left;
+    font-size: 20px;
+    padding: 5px 15px;
+}
+
+.speciality {
+    font-size: 19px;
+    margin: -10px 15px;
+}
+
+.technologies {
+    margin: 25px 15px;
+}
+
+.links {
+    margin: 85px 15px;
+    font-size: 15px;
+    vertical-align: top;
+}
+
+.links a{
+    text-decoration: none;
+    color: darkorange;
+}

@@ -1,4 +1,9 @@
-/* Add a black background color to the top navigation */
+/* MAIN */
+body {
+    background-color: #232323;
+}
+
+/* NAVIGATION BAR */
 .navbar {
     background-color: #313131;
     overflow: hidden;
@@ -24,4 +29,8 @@
 /* Change the color of links on hover */
 .navbar a:hover {
     color: white;
+}
+
+.teamfinder {
+    position: center;
 }
