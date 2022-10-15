@@ -9,3 +9,17 @@ const firebaseConfig = {
     appId: process.env.FIREBASE_APP_ID,
     measurementId: "G-M10XX1QCG0"
 };
+
+firebase.initializeApp(firebaseConfig);
+
+const auth = firebase.auth()
+const database = firebase.database()
+
+function register() {
+    email = document.getElementById('email').value
+    password = document.getElementById('password').value
+}
+
+function loginHiding() {
+
+}
