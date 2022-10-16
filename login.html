@@ -1,83 +1,45 @@
 <!DOCTYPE html>
+<html lang="en" >
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <title>Login / Sign Up Form</title>
+    <meta charset="UTF-8">
+    <title>Log In</title>
     <link rel="stylesheet" href="css/login-style.css">
-    <script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
 </head>
 <body>
-<div class="container">
-    <form class="form form--hidden" id="login">
-        <h1 class="form__title">Login</h1>
-        <div class="form__message form__message--error"></div>
-        <div class="form__input-group">
-            <input type="text" class="form__input" autofocus placeholder="Username or email">
-            <div class="form__input-error-message"></div>
-        </div>
-        <div class="form__input-group">
-            <input type="password" class="form__input" autofocus placeholder="Password">
-            <div class="form__input-error-message"></div>
-        </div>
-        <button class="form__button" type="submit">Continue</button>
-        <p class="form__text">
-            <a href="#" class="form__link">Forgot your password?</a>
-        </p>
-        <p class="form__text">
-            <a class="form__link" href="" id="linkCreateAccount">Don't have an account? Create account</a>
-        </p>
-    </form>
 
-    <form class="form" id="createAccount">
-        <h1 class="form__title">Create Account</h1>
-        <div class="form__message form__message--error"></div>
-        <div class="form__input-group">
-            <input type="text" id="signupUsername" class="form__input" autofocus placeholder="Username">
-            <div class="form__input-error-message"></div>
-        </div>
-        <div class="form__input-group">
-            <input type="text" class="form__input" id="email" autofocus placeholder="Email Address">
-            <div class="form__input-error-message"></div>
-        </div>
-        <div class="form__input-group">
-            <input type="password" class="form__input" id="password" autofocus placeholder="Password">
-            <div class="form__input-error-message"></div>
-        </div>
-        <div class="form__input-group">
-            <input type="password" class="form__input" autofocus placeholder="Confirm password">
-            <div class="form__input-error-message"></div>
-        </div>
-        <button class="form__button" type="submit">Continue</button>
-        <p class="form__text">
-            <a class="form__link" href="pages" id="linkLogin">Already have an account? Sign in</a>
-        </p>
-    </form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Login</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="background">
+    <div class="shape"></div>
+    <div class="shape"></div>
 </div>
+<form>
+    <h3>Login Here</h3>
+
+    <label for="username">Username</label>
+    <input type="text" placeholder="Email or Phone" id="username">
+
+    <label for="password">Password</label>
+    <input type="password" placeholder="Password" id="password">
+
+    <button>Log In</button>
+    <div class="social">
+        <div class="go"><i class="fab fa-google"></i>  Google</div>
+        <div class="fb"><i class="fab fa-github"></i>  Github</div>
+    </div>
+</form>
 </body>
+</html>
+<!-- partial -->
 
-<script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
-    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-auth.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-analytics.js";
-    import { getDatabase } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-database.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    const firebaseConfig = {
-        apiKey: process.env.FIREBASE_API_KEY,
-        authDomain: "letsmakeagame-13447.firebaseapp.com",
-        databaseURL: "https://letsmakeagame-13447-default-rtdb.europe-west1.firebasedatabase.app",
-        projectId: "letsmakeagame-13447",
-        storageBucket: "letsmakeagame-13447.appspot.com",
-        messagingSenderId: "492057155348",
-        appId: "1:492057155348:web:121c7cb8658f31fe369401",
-        measurementId: "G-M10XX1QCG0"
-    };
-
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const database = getDatabase(app);
-    const analytics = getAnalytics(app);
-</script>
+</body>
+</html>
