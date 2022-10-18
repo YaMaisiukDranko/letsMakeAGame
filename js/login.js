@@ -1,6 +1,2 @@
-import { initializeApp } from 'firebase/app';
-
-const firebaseConfig = {
-};
-
-const app = initializeApp(firebaseConfig);
+import "dotenv"
+const firebase_api_key = process.env.FIREBASE_API_KEY

@@ -1,10 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <title>sign up</title>
+    <link rel="stylesheet" href="css/login-style.css">
 </head>
 <body>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>login</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="background">
+    <div class="shape"></div>
+    <div class="shape"></div>
+</div>
+<form>
+    <h3>sign up</h3>
+
+    <label for="email">username</label>
+    <input type="text" placeholder="email" id="email">
+
+    <label for="password">password</label>
+    <input type="password" placeholder="password" id="password">
+
+    <button id="signUp">sign up</button>
+    <div class="social">
+        <div class="go"><i class="fab fa-google"></i>  google</div>
+        <div class="fb"><i class="fab fa-github"></i>  github</div>
+    </div>
+    <div class="signup-link"><a class="signup-link" href="login.html">already have an account? Log in</a></div>
+</form>
+</body>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-analytics.js";
+    import { getDatabase } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-database.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-auth.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+        apiKey: "AIzaSyDYo2MHCzQ7e5VWjVa4sSRJDWAFZHVQkpw",
+        authDomain: "letsmakeagame-13447.firebaseapp.com",
+        databaseURL: "https://letsmakeagame-13447-default-rtdb.europe-west1.firebasedatabase.app",
+        projectId: "letsmakeagame-13447",
+        storageBucket: "letsmakeagame-13447.appspot.com",
+        messagingSenderId: "492057155348",
+        appId: "1:492057155348:web:121c7cb8658f31fe369401",
+        measurementId: "G-M10XX1QCG0"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const database = getDatabase(app);
+    const auth = getAuth();
+
+    signUp.addEventListener('click',(e) => {
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                // Signed in
+                const user = userCredential.user;
+                alert('user created!')
+                // ...
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+
+                alert(errorMessage);
+            });
+    })
+</script>
+</html>
+<!-- partial -->
 </body>
 </html>

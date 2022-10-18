@@ -10,7 +10,7 @@ body{
 }
 .background{
     width: 430px;
-    height: 520px;
+    height: 560px;
     position: absolute;
     transform: translate(-50%,-50%);
     left: 50%;
@@ -114,4 +114,8 @@ button{
 }
 .social i{
     margin-right: 4px;
+}
+.signup-link {
+    margin: 0 25px ;
+    font-size: 13px;
 }
