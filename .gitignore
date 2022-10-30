@@ -3,4 +3,4 @@
 
 letsMakeAGame/.idea/
 
-.env
+secrets/.env
