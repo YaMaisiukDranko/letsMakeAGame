@@ -1,15 +1,10 @@
-import { getAuth, onAuthStateChanged } from "firebase/auth";
-
-const auth = getAuth();
-onAuthStateChanged(auth, (user) => {
-    if (user) {
-        // User is signed in, see docs for a list of available properties
-        // https://firebase.google.com/docs/reference/js/firebase.User
-        const uid = user.uid;
-        // ...
-    } else {
-        // User is signed out
-        // ...
+onAuthStateChanged(function (user) {
+    if (user) { //signed in
+        document.getElementById("login-div").style.display = "block";
+        document.getElementById("user-div").style.display = "none";
+    } else { //signed out
+        document.getElementById("login-div").style.display = "none";
+        document.getElementById("user-div").style.display = "block";
     }
 });
 
@@ -18,4 +13,10 @@ function login(){
     var userPassword = document.getElementById("password-field").value;
 
     window.alert("login button" + userEmail + userPassword);
+
+    firebase.auth().signInWithEmailAndPassword(userEmail, userPassword).catch(function(error) {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            window.alert("ERROR " + errorMessage);
+        });
 }
