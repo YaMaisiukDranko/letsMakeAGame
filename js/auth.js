@@ -1,4 +1,4 @@
-onAuthStateChanged(function (user) {
+firebase.auth().onAuthStateChanged(function(user) {
     if (user) { //signed in
         document.getElementById("login-div").style.display = "block";
         document.getElementById("user-div").style.display = "none";
@@ -11,8 +11,6 @@ onAuthStateChanged(function (user) {
 function login(){
     var userEmail = document.getElementById("email-field").value;
     var userPassword = document.getElementById("password-field").value;
-
-    window.alert("login button" + userEmail + userPassword);
 
     firebase.auth().signInWithEmailAndPassword(userEmail, userPassword).catch(function(error) {
             var errorCode = error.code;
